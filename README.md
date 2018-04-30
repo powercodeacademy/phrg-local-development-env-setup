@@ -97,4 +97,6 @@ Now let’s get your node version manager installed. Node is a package manager f
 
 Install Java Next, we’ll want to install the latest version of the Java Development Kit. To get that, head on over to the [download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and select the Java SE Development Kit for Mac OSX and install it.
 
-## Step 16 - (Optional) Turn up your key repeat. Open `System Preferences` by clicking the apple icon in the top left corner of your screen and selecting `System Preferences`. Then Click `Keyboard` and make sure both `Key Repeat` and `Delay Until Repeat` are turned up all the way. This will allow you to move your cursor through text much faster. This is very useful working in a command line interface.
+## Step 16 - Faster cursor navigation
+
+(Optional) Turn up your key repeat. Open `System Preferences` by clicking the apple icon in the top left corner of your screen and selecting `System Preferences`. Then Click `Keyboard` and make sure both `Key Repeat` and `Delay Until Repeat` are turned up all the way. This will allow you to move your cursor through text much faster. This is very useful working in a command line interface.
