@@ -88,8 +88,6 @@ WIP
 Now let’s get your node version manager installed. Node is a package manager for JavaScript.
 
 1. Run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash` on terminal.
-1. Then run `echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bash_profile`
-1. As well as `echo '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"' >> ~/.bash_profile`
 1. Run `source ~/.bash_profile`. This will refresh your shell after making these changes. This way you won't have to quit terminal and open it again.
 1. Finally, run `nvm install 6.11.2` to install Node.js (`nvm` stands for Node Version Manager).
 
