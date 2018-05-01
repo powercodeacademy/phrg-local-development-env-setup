@@ -126,7 +126,16 @@ The powerful ruby web framework. We can install that with: `gem install rails`
 
 ## Step 13 - Bash Config
 
-WIP
+Your `.bashrc` and `.bash_profile` load up every time you open a terminal window. Power's bash config files are designed add some shell shortcuts, make sure that RVM loads up properly, and provide a more informative and prompt.
+
+If when you’re trying to back up the files you get the error ‘No such file or directory’, don’t worry. This just means you didn’t have one of these files to start with, so there is nothing to backup.
+
+1. Back up your .bashrc file with `mv ~/.bashrc{,.bak}`
+1. Back up your .bash_profile file with mv `~/.bash_profile{,.bak}`
+1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bashrc" -o "$HOME/.bashrc"`
+1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bash_profile" -o "$HOME/.bash_profile"`
+
+Once the above commands have been run, start a new terminal session.
 
 ## Step 14 - Node
 
