@@ -194,9 +194,6 @@ if [ -n "$PS1" ]; then
   # Case-Insensitive Auto Completion
   bind "set completion-ignore-case on"
 
-  # Check for local environment overrides
-  [ -r "$HOME/.localenv-$HOSTNAME.sh" ] && . "$HOME/.localenv-$HOSTNAME.sh"
-
   # And finally, remind me which host and OS I'm logged into.
   printf "${BRIGHT}${WHITE}$HOSTNAME `uname -rs`${NORMAL} ${USERCOLOR} ${NORMAL}\n" >&2
 

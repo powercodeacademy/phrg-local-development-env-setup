@@ -126,7 +126,7 @@ The powerful Ruby web framework. We can install that with: `gem install rails`
 
 ## Step 13 - Bash Config
 
-Your `.bashrc` and `.bash_profile` load up every time you open a terminal window. Power's bash config files are designed add some shell shortcuts, make sure that RVM loads up properly, and provide a more informative and prompt.
+Your `.bashrc` and `.bash_profile` load up every time you open a terminal window. Power's bash config files are designed to add some shell shortcuts, make sure that RVM loads up properly, and provide a more informative shell prompt.
 
 If when you’re trying to back up the files you get the error ‘No such file or directory’, don’t worry. This just means you didn’t have one of these files to start with, so there is nothing to backup.
 
