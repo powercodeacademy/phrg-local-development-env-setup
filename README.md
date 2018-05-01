@@ -4,28 +4,32 @@
 
 For detailed instructions on how to properly uninstall the IDE, please follow [this Help Center article](http://help.learn.co/the-learn-ide/ide-settings/deleting-the-ide).
 
-## Step 2 - Download Xcode Command Line Tools
+## Step 2 - Download iTerm2 & Xcode
 
-Open up your Terminal. This is where we are going to be doing most of our installation steps! You can open up your terminal by going to Applications > Utilities > Terminal, or by using the quick launch (cmd + space) and just start typing “Terminal”.
+In computing, a `shell` is a user interface for access to an operating system's services. In general, operating system shells use either a command-line interface (CLI) or graphical user interface (GUI), depending on a computer's role and particular operation. We are accustomed to the Mac GUI because that is all we have known.
 
-In terminal, type `xcode-select --install` to install the Xcode command line tools.
+The built in CLI shell for Macs is called Terminal. Throughout this course, learn.co lessons will refer to your shell as "terminal" because that is what is baked in. However, we are going to install a better shell system called iTerm2.
+
+[Click the 'Download' button in this link](https://www.iterm2.com/) to install iTerm2. Double click on zip file it installs, then open the application. Right click on the iTerm icon in your Dock and select Options -> Keep in Dock. Make sure iTerm2 is in your Applications folder on your computer.
+
+In your shell session, type `xcode-select --install` to install the Xcode command line tools.
 If you get a message that the command line tools are already installed, that is fine.
 
 ## Step 3 - Install Homebrew
 
-Install the Homebrew package manager. You can do this by entering the following command into your terminal:
+Install the Homebrew package manager. You can do this by entering the following command into your shell:
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Note, this is all one line in the terminal even if it is broken up into two lines here in your browser.
+Note, this is all one line in the shell even if it is broken up into two lines here in your browser.
 
 ## Step 4 - Get git and set it up
 
-1. Make sure you have [git](https://git-scm.com/downloads). It generally comes pre-installed with most operating systems, but you can check by running `git version` in your shell session. If this gives you an error or does not come back with version number, you'll need to install git. You can get it by typing `brew install git` into your terminal.
+1. Make sure you have [git](https://git-scm.com/downloads). It generally comes pre-installed with most operating systems, but you can check by running `git version` in your shell session. If this gives you an error or does not come back with version number, you'll need to install git. You can get it by typing `brew install git` into your shell.
 1. Run `ssh-keygen` to create a new SSH key. If you do not already have an SSH key setup, you’ll be asked to select a location and a passphrase. Just leave everything blank and press enter for default location and no passphrase. If you’re asked if you want to overwrite, then you already have an SSH key and you do not want to overwrite it.
-1. `cat ~/.ssh/id_rsa.pub` will display your SSH key to your terminal. You want to then copy this and add this SSH key to your github by following [these instructions posted on GitHub](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
+1. `cat ~/.ssh/id_rsa.pub` will display your SSH key to your shell. You want to then copy this and add this SSH key to your github by following [these instructions posted on GitHub](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/).
 
 You are also going to want to let the git that is running on your machine to know you you are. You can set this up by running: `git config --global user.email "you@example.com"` and `git config --global user.name "Your Name"`.
 
@@ -53,7 +57,7 @@ Ruby gems are pre-written, stand-alone, chunks of code that have been made easil
 
 ## Step 8 - Set up the Learn gem
 
-Now we need to setup the Learn gem. Type the following into your terminal: `learn whoami`
+Now we need to setup the Learn gem. Type the following into your shell session: `learn whoami`
 
 This will prompt you to set up the Learn gem.
 
@@ -126,7 +130,7 @@ The powerful Ruby web framework. We can install that with: `gem install rails`
 
 ## Step 13 - Bash Config
 
-Your `.bashrc` and `.bash_profile` load up every time you open a terminal window. Power's bash config files are designed to add some shell shortcuts, make sure that RVM loads up properly, and provide a more informative shell prompt.
+Your `.bashrc` and `.bash_profile` load up every time you open a shell window. Power's bash config files are designed to add some shell shortcuts, make sure that RVM loads up properly, and provide a more informative shell prompt.
 
 If when you’re trying to back up the files you get the error ‘No such file or directory’, don’t worry. This just means you didn’t have one of these files to start with, so there is nothing to backup.
 
@@ -135,14 +139,14 @@ If when you’re trying to back up the files you get the error ‘No such file o
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bashrc" -o "$HOME/.bashrc"`
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bash_profile" -o "$HOME/.bash_profile"`
 
-Once the above commands have been run, start a new terminal session.
+Once the above commands have been run, start a new shell session.
 
 ## Step 14 - Node
 
 Now let’s get your node version manager installed. Node is a package manager for JavaScript.
 
-1. Run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash` on terminal.
-1. Run `source ~/.bash_profile`. This will refresh your shell after making these changes. This way you won't have to quit terminal and open it again.
+1. Run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash` on iTerm.
+1. Run `source ~/.bash_profile`. This will refresh your shell after making these changes. This way you won't have to quit shell session and open it again.
 1. Finally, run `nvm install 6.11.2` to install Node.js (`nvm` stands for Node Version Manager).
 
 ## Step 15 - Java
