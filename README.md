@@ -41,9 +41,9 @@ Next we’re going to add a few support libraries with the following lines: `bre
 1. ONCE THIS STEP COMPLETES, CLOSE AND RE-OPEN YOUR TERMINAL. If you skip this step, RVM will not work.
 1. Run `rvm install 2.5.1`
 1. Run `rvm use 2.5.1 --default`
-1. Check that everything worked by running `ruby -v` and `rvm list`. This should output the version of ruby you’re using (2.5.1) and the list of versions available with your RVM install.
+1. Check that everything worked by running `ruby -v` and `rvm list`. This should output the version of Ruby you’re using (2.5.1) and the list of versions available with your RVM install.
 
-## Step 7 - Install some ruby gems
+## Step 7 - Install some Ruby gems
 
 Ruby gems are pre-written, stand-alone, chunks of code that have been made easily accessible to you.
 
@@ -110,7 +110,7 @@ Next, go to Preferences -> Settings. A new text editor window will pop up with 2
 
 ## Step 10 - Install some more gems!
 
-1. Phantom JS is a JavasScript library and this ruby gem easily installs it for you: `gem install phantomjs`
+1. Phantom JS is a JavasScript library and this Ruby gem easily installs it for you: `gem install phantomjs`
 1. Nokogiri is a gem that let’s us scrape websites and you’ll definitely want to be able to use it. Let’s install it with: `gem install nokogiri`. If you encounter any errors while install this gem, check out the Nokogiri support docs for Mac OSX installs.
 
 ## Step 11 - Get some databases
@@ -122,7 +122,7 @@ You’ll be using a couple of different databases as you move through the web de
 
 ## Step 12 - Install Rails
 
-The powerful ruby web framework. We can install that with: `gem install rails`
+The powerful Ruby web framework. We can install that with: `gem install rails`
 
 ## Step 13 - Bash Config
 
