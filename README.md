@@ -124,7 +124,7 @@ You’ll be using a couple of different databases as you move through the web de
 
 The powerful ruby web framework. We can install that with: `gem install rails`
 
-## Step 13 - Dotfiles
+## Step 13 - Bash Config
 
 WIP
 
