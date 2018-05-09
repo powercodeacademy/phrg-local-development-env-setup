@@ -52,7 +52,7 @@ Next we’re going to add a few support libraries with the following lines: `bre
 Ruby gems are pre-written, stand-alone, chunks of code that have been made easily accessible to you.
 
 1. First, let's update our system gems with: `gem update --system`
-1. Install the Learn gems. Do this with: `gem install learn-co .`
+1. Install the Learn gems. Do this with: `gem install learn-co`
 1. Install the gem bundler. This gem takes care of installing all the other gems you need for projects: `gem install bundler`
 
 ## Step 8 - Set up the Learn gem
@@ -135,7 +135,7 @@ Your `.bashrc` and `.bash_profile` load up every time you open a shell window. P
 If when you’re trying to back up the files you get the error ‘No such file or directory’, don’t worry. This just means you didn’t have one of these files to start with, so there is nothing to backup.
 
 1. Back up your .bashrc file with `mv ~/.bashrc{,.bak}`
-1. Back up your .bash_profile file with mv `~/.bash_profile{,.bak}`
+1. Back up your .bash_profile file with `mv ~/.bash_profile{,.bak}`
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bashrc" -o "$HOME/.bashrc"`
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bash_profile" -o "$HOME/.bash_profile"`
 
