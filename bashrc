@@ -199,6 +199,10 @@ if [ -n "$PS1" ]; then
 
 fi # Test for non-interactive shells
 
-# Start by loading RVM/NVM support
-[ -s "${HOME}/.rvm/scripts/rvm" ] && . "${HOME}/.rvm/scripts/rvm"
+# Load NVM support
 [ -s "${HOME}/.nvm/nvm.sh" ] && . "${HOME}/.nvm/nvm.sh"
+
+# RVM requires its bin path be first in $PATH, otherwise it throws a warning.
+# The nvm.sh script above does this too, so rvm must be prepended after this.
+export PATH="$HOME/.rvm/bin:$PATH"
+[ -s "${HOME}/.rvm/scripts/rvm" ] && . "${HOME}/.rvm/scripts/rvm"
