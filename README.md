@@ -136,6 +136,7 @@ If when you’re trying to back up the files you get the error ‘No such file o
 
 1. Back up your .bashrc file with `mv ~/.bashrc{,.bak}`
 1. Back up your .bash_profile file with `mv ~/.bash_profile{,.bak}`
+1. Run `curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" -o "$HOME/.git-completion.bash"`
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bashrc" -o "$HOME/.bashrc"`
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bash_profile" -o "$HOME/.bash_profile"`
 

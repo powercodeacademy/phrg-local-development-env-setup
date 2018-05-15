@@ -14,6 +14,10 @@ if [ -n "$PS1" ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
 
+  if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
+  fi
+
   # Lets define some pretty colors
   BLACK='\033[30m'
   RED='\033[31m'
