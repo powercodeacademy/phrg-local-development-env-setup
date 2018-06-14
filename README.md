@@ -112,6 +112,12 @@ Next, go to Preferences -> Settings. A new text editor window will pop up with 2
 }
 ```
 
+Lastly, symlink the sublime executable to your PATH. Run:
+
+```
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+```
+
 ## Step 10 - Install some more gems!
 
 1. Phantom JS is a JavasScript library and this Ruby gem easily installs it for you: `gem install phantomjs`
