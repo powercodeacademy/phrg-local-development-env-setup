@@ -82,58 +82,9 @@ Note: When the gem asks you to go to `learn.co/your-github-username`, you must f
 
 ## Step 9 - Get a Text Editor
 
-[Use this link](https://www.sublimetext.com/3) to install Sublime Text for OS X. Drag Sublime into your Applications folder and verify it is there.
+[Use this link](https://code.visualstudio.com/) to install the VSCode's stable build for MacOS.
 
-Open up Sublime and open its "Package Control". You can reach this dropdown prompt through Preference -> Package Control, or with Command+Shift+P. Type "Install Package" then click on that selection from the dropdown.
-
-The next dropdown is a list of extensions you can add to Sublime. Clicking on a selection installs the package. Repeat this process until all the following packages are installed:
-
-1. GitGutter
-1. Babel
-1. SublimeERB
-1. SyncedSideBar
-1. BracketHighlighter
-1. Sass
-1. ReactJS
-1. RailsGoToSpec
-1. JavaScriptNext - ES6 Syntax
-1. Theme - SoDaReloaded
-
-Next, go to Preferences -> Settings. A new text editor window will pop up with 2 sides. The left side is locked options that are Sublime defaults. The right side is what you will edit. Replace the entire right side with this exact content:
-
-```js
-{
-  "color_scheme": "Packages/JavaScriptNext - ES6 Syntax/Monokai Phoenix.tmTheme",
-  "draw_white_space": "all",
-  "ensure_newline_at_eof_on_save": true,
-  "folder_exclude_patterns":
-  [
-    ".git",
-    ".vagrant",
-    "coverage",
-    "log",
-    "vendor"
-  ],
-  "font_size": 15,
-  "hide_minimap": true,
-  "highlight_modified_tabs": true,
-  "ignored_packages": ["Vintage"],
-  "show_definitions": false,
-  "show_full_path": true,
-  "soda_classic_tabs": true,
-  "tab_size": 2,
-  "theme": "SoDaReloaded Dark.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
-  "word_wrap": true
-}
-```
-
-Lastly, symlink the sublime executable to your PATH. Run:
-
-```
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-```
+Once opened, click on the last icon on the left hand bar that is made up of 4 squares. From here you can download Extensions. Download `Live Share` and `VSCode Ruby`.
 
 ## Step 10 - Install some more gems!
 
