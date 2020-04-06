@@ -37,15 +37,32 @@ You are also going to want to let the git that is running on your machine to kno
 
 Next we’re going to add a few support libraries with the following lines: `brew install gmp` and `brew install gnupg`. Note: If you get the following error: `Warning: gnupg-1.4.19 already installed`, it’s just not linked up. So simply run: `brew link gnupg`.
 
-## Step 6 - Install Ruby Version Manager
+## Step 6 - Install asdf-vm
 
-[RVM](http://rvm.io/) is a great tool that lets you run different versions of Ruby on your computer. This is really useful because if you know one project you're working on works with Ruby version 2.3.3 and another needs 2.5.1, you can easily switch between the two versions when you switch between projects. You can install it and set it up with the following commands:
+[asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm) is a great tool that lets you run different versions of multiple libraries on your computer. This is useful because if you know one project you're working on works with Ruby version 2.5.1 and another needs 2.6.0, you can easily switch between them. You can install it and set it up with the following commands:
 
-1. Run `curl -sSL https://get.rvm.io | bash`
-1. ONCE THIS STEP COMPLETES, CLOSE AND RE-OPEN YOUR TERMINAL. If you skip this step, RVM will not work.
-1. Run `rvm install 2.5.1`
-1. Run `rvm use 2.5.1 --default`
-1. Check that everything worked by running `ruby -v` and `rvm list`. This should output the version of Ruby you’re using (2.5.1) and the list of versions available with your RVM install.
+1. Run `brew install asdf`
+1. Run `echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile`
+1. Run `echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile`
+
+## Step 6.1 - Install Ruby
+
+1. Run `asdf plugin add ruby`
+1. Run `asdf install ruby 2.5.0`
+1. Check that everything worked by running `ruby -v`. This should output the version of Ruby you’re using (2.5.0). To list the versions of Ruby you have available, run `asdf list ruby`.
+
+## Step 6.2 - Install NodeJS
+
+1. Run `asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git`
+1. Run `bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring`
+1. Run `asdf install nodejs 10.17.0`
+1. Check that everything worked by running `node -v`. This should output the version of NodeJS you’re using (10.17.0). To list the versions of NodeJS you have available, run `asdf list nodejs`.
+
+## Step 6.3 - Install Yarn
+
+1. Run `asdf plugin add yarn`
+1. Run `asdf install yarn 1.13.0`
+1. Check that everything worked by running `yarn -v`. This should output the version of Yarn you’re using (1.13.0). To list the versions of Yarn you have available, run `asdf list yarn`.
 
 ## Step 7 - Install some Ruby gems
 
@@ -147,14 +164,6 @@ If when you’re trying to back up the files you get the error ‘No such file o
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bash_profile" -o "$HOME/.bash_profile"`
 
 Once the above commands have been run, start a new shell session.
-
-## Step 14 - Node
-
-Now let’s get your node version manager installed. Node is a package manager for JavaScript.
-
-1. Run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash` on iTerm.
-1. Run `source ~/.bash_profile`. This will refresh your shell after making these changes. This way you won't have to quit shell session and open it again.
-1. Finally, run `nvm install 6.11.2` to install Node.js (`nvm` stands for Node Version Manager).
 
 ## Step 15 - Java
 

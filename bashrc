@@ -2,6 +2,10 @@
 
 export PATH=/usr/local/bin:$PATH
 
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
 # If not running interactively, don't do anything
 if [ -n "$PS1" ]; then
 
@@ -72,7 +76,6 @@ if [ -n "$PS1" ]; then
   USERCOLOR=$BRIGHT$WHITE
 
   # Find out which terminal device we are on
-  RVMSTRING=\$\("rvm current 2>/dev/null"\)
   GITBRANCH=\$\("git rev-parse --abbrev-ref HEAD 2>/dev/null"\)
 
   # Prepare the titlebar string if we happen to be on an xterm (or a derivative).
@@ -99,9 +102,17 @@ if [ -n "$PS1" ]; then
       echo \"\\n\[${BRIGHT}${WHITE}[${RED}\]Last command returned error \$returnval\[${WHITE}\]]\"
     fi)"
 
+  # Strip leading and trailing white space (new line inclusive).
+  trim(){
+      [[ "$1" =~ [^[:space:]](.*[^[:space:]])? ]]
+      printf "%s" "$BASH_REMATCH"
+  }
+
+  RUBYSTRING="$(trim $(asdf list ruby))"
+
   # Prints "host: /path/to/cwd (terminal device)" properly colorized for the
   # current network. "user" is printed as red if EUID=0
-  TOPLINE="\[${NORMAL}\]\n\$([ 0 == \$EUID ] && echo \[${BRIGHT}${RED}\] || echo \[${USERCOLOR}\])\u\[${NORMAL}${USERCOLOR}\]: \w\[${NORMAL}\] (${NORMAL}${RED}${RVMSTRING:-null}${NORMAL}) ${BRIGHT}${BLUE}${GITBRANCH}${NORMAL}\n"
+  TOPLINE="\[${NORMAL}\]\n\$([ 0 == \$EUID ] && echo \[${BRIGHT}${RED}\] || echo \[${USERCOLOR}\])\u\[${NORMAL}${USERCOLOR}\]: \w\[${NORMAL}\] (${NORMAL}${RED}${RUBYSTRING:-null}${NORMAL}) ${BRIGHT}${BLUE}${GITBRANCH}${NORMAL}\n"
 
   # Prints "[date time]$ " substituting the current date and time.  "$" will print
   # as a red "#" when EUID=0
@@ -203,10 +214,4 @@ if [ -n "$PS1" ]; then
 
 fi # Test for non-interactive shells
 
-# Load NVM support
-[ -s "${HOME}/.nvm/nvm.sh" ] && . "${HOME}/.nvm/nvm.sh"
-
-# RVM requires its bin path be first in $PATH, otherwise it throws a warning.
-# The nvm.sh script above does this too, so rvm must be prepended after this.
-export PATH="$HOME/.rvm/bin:$PATH"
-[ -s "${HOME}/.rvm/scripts/rvm" ] && . "${HOME}/.rvm/scripts/rvm"
+export GPG_TTY=$(tty)
