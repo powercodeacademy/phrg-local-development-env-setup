@@ -2,9 +2,11 @@
 
 export PATH=/usr/local/bin:$PATH
 
-. $HOME/.asdf/asdf.sh
+. $(brew --prefix asdf)/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # If not running interactively, don't do anything
 if [ -n "$PS1" ]; then

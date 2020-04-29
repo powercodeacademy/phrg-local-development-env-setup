@@ -42,8 +42,8 @@ Next we’re going to add a few support libraries with the following lines: `bre
 [asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm) is a great tool that lets you run different versions of multiple libraries on your computer. This is useful because if you know one project you're working on works with Ruby version 2.5.1 and another needs 2.6.0, you can easily switch between them. You can install it and set it up with the following commands:
 
 1. Run `brew install asdf`
-1. Run `echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile`
-1. Run `echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile`
+1. Run `echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.bash_profile`
+1. Run `echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.bash_profile`
 
 ## Step 7 - Install Ruby
 
