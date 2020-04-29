@@ -66,7 +66,17 @@ Next we’re going to add a few support libraries with the following lines: `bre
 
 ## Step 10 - Configure default plugin versions
 
-todo
+For `asdf` to work properly, it will need some default versions defined for its plugins. This is accomplished with a simple configuration file called `.tool-versions`. Let's create this file at our `$HOME` directory:
+
+Run: `touch ~/.tool-versions`
+
+And manually add our config into it. Open the new file with `open ~/.tool-versions` and put these lines in it:
+
+```
+ruby 2.5.0
+yarn 1.13.0
+nodejs 10.17.0
+```
 
 ## Step 11 - Install some Ruby gems
 
