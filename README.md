@@ -86,6 +86,8 @@ Note: When the gem asks you to go to `learn.co/your-github-username`, you must f
 
 Once opened, click on the last icon on the left hand bar that is made up of 4 squares. From here you can download Extensions. Download `Live Share` and `VSCode Ruby`.
 
+Next, [use these instructions](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to install the `code` shortcut command for opening VSCode from your shell sessions.
+
 ## Step 13 - Install some more gems!
 
 1. Phantom JS is a JavasScript library and this Ruby gem easily installs it for you: `gem install phantomjs`
