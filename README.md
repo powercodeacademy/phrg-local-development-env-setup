@@ -64,7 +64,11 @@ Next we’re going to add a few support libraries with the following lines: `bre
 1. Run `asdf install yarn 1.13.0`
 1. Check that everything worked by running `yarn -v`. This should output the version of Yarn you’re using (1.13.0). To list the versions of Yarn you have available, run `asdf list yarn`.
 
-## Step 10 - Install some Ruby gems
+## Step 10 - Configure default plugin versions
+
+todo
+
+## Step 11 - Install some Ruby gems
 
 Ruby gems are pre-written, stand-alone, chunks of code that have been made easily accessible to you.
 
@@ -72,7 +76,7 @@ Ruby gems are pre-written, stand-alone, chunks of code that have been made easil
 1. Install the Learn gems. Do this with: `gem install learn-co`
 1. Install the gem bundler. This gem takes care of installing all the other gems you need for projects: `gem install bundler`
 
-## Step 11 - Set up the Learn gem
+## Step 12 - Set up the Learn gem
 
 Now we need to setup the Learn gem. Type the following into your shell session: `learn whoami`
 
@@ -80,7 +84,7 @@ This will prompt you to set up the Learn gem.
 
 Note: When the gem asks you to go to `learn.co/your-github-username`, you must fill your username into the URL AND be logged in to be able to retrieve your token.
 
-## Step 12 - Get a Text Editor
+## Step 13 - Get a Text Editor
 
 [Use this link](https://code.visualstudio.com/) to install the VSCode's stable build for MacOS.
 
@@ -88,23 +92,23 @@ Once opened, click on the last icon on the left hand bar that is made up of 4 sq
 
 Next, [use these instructions](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to install the `code` shortcut command for opening VSCode from your shell sessions.
 
-## Step 13 - Install some more gems!
+## Step 14 - Install some more gems!
 
 1. Phantom JS is a JavasScript library and this Ruby gem easily installs it for you: `gem install phantomjs`
 1. Nokogiri is a gem that let’s us scrape websites and you’ll definitely want to be able to use it. Let’s install it with: `gem install nokogiri`. If you encounter any errors while install this gem, check out the Nokogiri support docs for Mac OSX installs.
 
-## Step 14 - Get some databases
+## Step 15 - Get some databases
 
 You’ll be using a couple of different databases as you move through the web development track. The default database that rails uses is SQLite. We also frequently see that students want to deploy their apps to the free hosting service [Heroku](https://signup.heroku.com/). To do this though, you’ll need to be using Postgres instead. It’s best if we just install both of them now so you can use either one.
 
 1. SQLite: `brew install sqlite`
 1. Postgres: Install the Postgres app at: [Postgres.app](http://postgresapp.com/)
 
-## Step 15 - Install Rails
+## Step 16 - Install Rails
 
 The powerful Ruby web framework. We can install that with: `gem install rails`
 
-## Step 16 - Bash Config
+## Step 17 - Bash Config
 
 Your `.bashrc` and `.bash_profile` load up every time you open a shell window. Power's bash config files are designed to add some shell shortcuts, make sure that asdf-vm plugins load up properly, and provide a more informative shell prompt.
 
@@ -117,10 +121,6 @@ If when you’re trying to back up the files you get the error ‘No such file o
 1. Run `curl "https://raw.githubusercontent.com/powerhome/phrg-local-development-env-setup/master/bash_profile" -o "$HOME/.bash_profile"`
 
 Once the above commands have been run, start a new shell session.
-
-## Step 17 - Java
-
-Install Java Next, we’ll want to install the latest version of the Java Development Kit. To get that, head on over to the [download page](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) and select the Java SE Development Kit for Mac OSX and install it.
 
 ## Step 18 - Faster cursor navigation
 
