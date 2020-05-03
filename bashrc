@@ -183,7 +183,7 @@ if [ -n "$PS1" ]; then
 
   # And save all those wonderful settings from above
   export PS1 LS_COLORS LSCOLORS
-  export EDITOR='subl -n -w'
+  export EDITOR='code -w'
 
   # vi mode must come *BEFORE* any additional keybindings
   # Keep that neat functionality from emacs mode where CTRL-L clears the screen
