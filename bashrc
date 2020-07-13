@@ -110,7 +110,8 @@ if [ -n "$PS1" ]; then
       printf "%s" "$BASH_REMATCH"
   }
 
-  RUBYSTRING="$(trim $(asdf list ruby))"
+  CURRENTRUBY=\$\("asdf current ruby"\)
+  RUBYSTRING=\$\("trim ${CURRENTRUBY}"\)
 
   # Prints "host: /path/to/cwd (terminal device)" properly colorized for the
   # current network. "user" is printed as red if EUID=0
